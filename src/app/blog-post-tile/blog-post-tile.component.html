@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{blogPost.title}}</h5>
+    <p></p>
+
+    <span *ngIf="collapsed">
+      {{blogPost.summary | truncate: 70}}
+      <a href="#" (click)="toggle()"> more</a>
+    </span>
+    <span *ngIf="!collapsed">
+      {{blogPost.summary}} 
+      <a href="#" (click)="toggle()"> less</a>
+    </span>
+
+    <p></p>
+    <a href="#" class="btn btn-primary">Read</a>
+  </div>
+</div>
