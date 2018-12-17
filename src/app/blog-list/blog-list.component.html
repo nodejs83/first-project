@@ -1,6 +1,11 @@
 <div class="post">
-    <app-blog-post-tile 
-    *ngFor="let post of blogPosts[currentPage]" [blogPost]="post">
+    <a href="#" (click)="expandAll()" 
+    class="btn btn-primary" style="margin:2px">
+        Toggle All
+    </a>
+    <app-blog-post-tile #tiles
+    *ngFor="let post of blogPosts[currentPage]" 
+    [blogPost]="post">
     </app-blog-post-tile>
 </div>
 <div style="width: 900px; margin:auto">

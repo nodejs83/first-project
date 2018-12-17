@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChildren, QueryList, ViewChild } from '@angular/core';
 import { BlogPost } from '../blog-post';
+import { BlogPostTileComponent } from '../blog-post-tile/blog-post-tile.component';
 
 @Component({
   selector: 'app-blog-list',
@@ -12,7 +13,15 @@ export class BlogListComponent implements OnInit {
   blogPosts: BlogPost[][] = [];
   currentPage: number;
 
+  @ViewChildren('tiles') blogPostTileComponents: QueryList<BlogPostTileComponent>;
+  //Use this if it was one component (without ngFor)
+  //@ViewChild('tiles') blogPostTileComponent: BlogPostTileComponent;
+
   constructor() { }
+
+  expandAll(){
+    this.blogPostTileComponents.forEach(e => e.toggle());
+  }
 
   ngOnInit() {
     this.currentPage = 0;
