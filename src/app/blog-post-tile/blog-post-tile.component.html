@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" [ngClass]="{'fav': blogPost.fav}">
   <div class="card-body">
     <h5 class="card-title">{{blogPost.title}}</h5>
     <p></p>
@@ -13,6 +13,10 @@
     </span>
 
     <p></p>
+    <a href="#" (click)="toggleFav()" class="btn btn-primary" 
+      style="margin-right:2px">
+      Favorite
+    </a>
     <a href="#" class="btn btn-primary">Read</a>
   </div>
 </div>

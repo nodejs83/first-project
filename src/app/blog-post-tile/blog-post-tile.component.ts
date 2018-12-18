@@ -13,6 +13,10 @@ export class BlogPostTileComponent implements OnInit {
 
   constructor() { }
 
+  toggleFav(){
+    this.blogPost.fav = !this.blogPost.fav;
+  }
+
   toggle(): void {
     this.collapsed = !this.collapsed;
   }
