@@ -1,4 +1,4 @@
-<div class="post">
+<div >
     <a href="#" (click)="expandAll()" 
     class="btn btn-primary" style="margin:2px">
         Toggle All
@@ -6,9 +6,12 @@
     <app-blog-post-tile #tiles
     *ngFor="let post of blogPosts[currentPage]" 
     [blogPost]="post">
+    <p>One of the Angular features that help us 
+        the most in building reusable components 
+        is Content Projection and ng-content</p>
     </app-blog-post-tile>
 </div>
-<div style="width: 900px; margin:auto">
+<div style="width: 1000px; margin:auto">
     <app-paginator [numberOfPages]="blogPosts.length" 
     (pageNumberClick)="updatePage($event)">
     </app-paginator>

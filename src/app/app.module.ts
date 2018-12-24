@@ -7,6 +7,7 @@ import { BlogListComponent } from './blog-list/blog-list.component';
 import { TruncatePipe } from './truncate.pipe';
 import { PaginatorComponent } from './paginator/paginator.component';
 import { HighlightDirective } from './highlight.directive';
+import { ShellComponent } from './shell/shell.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { HighlightDirective } from './highlight.directive';
     TruncatePipe,
     PaginatorComponent,
     HighlightDirective,
+    ShellComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,6 @@
+.post {
+    max-height: 500px; 
+    overflow: auto;
+    width: 1010px; 
+    margin:auto
+}
